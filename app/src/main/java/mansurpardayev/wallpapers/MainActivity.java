@@ -16,6 +16,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -28,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
     Handler handler = new Handler();
+
+
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if (item.getItemId() == R.id.desktopMenu) {
+                    InterstitialAd();
                     checkInternet();
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame, new DesktopFragment())
@@ -96,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (item == R.id.desktopMenu) {
             bottomNavigationView.getMenu().getItem(1).setChecked(true);
-
+            InterstitialAd();
         }
     }
 
@@ -129,4 +140,41 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(runnable, 10000);
         }
     };
+
+    public void InterstitialAd (){
+
+        // ca-app-pub-3940256099942544/1033173712
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(MainActivity.this);
+                }
+            }
+        },1000);
+    }
 }

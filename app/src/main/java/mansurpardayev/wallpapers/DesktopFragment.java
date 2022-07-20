@@ -6,6 +6,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.util.ArrayList;
 
@@ -92,6 +101,15 @@ public class DesktopFragment extends Fragment {
         arrayList.add(new Model("https://telegra.ph/file/6050f46799d44d15c0a68.gif"));
         arrayList.add(new Model("https://telegra.ph/file/fad3f5251cfbfc4bf6403.jpg"));
         arrayList.add(new Model("https://telegra.ph/file/0630c7b0a3b84f06aeb03.jpg"));
+        //
+
+        arrayList.add(new Model("https://images.ctfassets.net/hrltx12pl8hq/6KAbKYoF4pZ6QHcwBJuwa1/5441b32dd5b5ace2a9d93dd169ddfdd0/wallpaper-images-hero.jpg?fit=fill&w=800&h=300"));
+        arrayList.add(new Model("https://telegra.ph/file/93f89d3b432f29183bf45.png"));
+        arrayList.add(new Model("https://telegra.ph/file/6770a9cefca98b0886306.png"));
+        arrayList.add(new Model("https://telegra.ph/file/fad5b128c7ca7826f2427.png"));
+        arrayList.add(new Model("https://telegra.ph/file/10dae76cb338ef3fa2496.png"));
+        arrayList.add(new Model("https://telegra.ph/file/7f99730d0453f698ee6ec.png"));
     }
+
 }
 // https://telegra.ph/Wallpaper-Desktop-07-12

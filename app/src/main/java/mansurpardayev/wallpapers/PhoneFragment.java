@@ -110,6 +110,23 @@ public class PhoneFragment extends Fragment {
         arrayList.add(new Model("https://telegra.ph/file/1d95e20c532fe691cc7ad.jpg"));
         arrayList.add(new Model("https://telegra.ph/file/004eb70b9c94bf353f29b.jpg"));
         arrayList.add(new Model("https://telegra.ph/file/b8a43ab3878d04eaa9223.jpg"));
+
+        //
+
+
+        arrayList.add(new Model("https://telegra.ph/file/4ccf12a12e08ea5d091bd.png"));
+        arrayList.add(new Model("https://telegra.ph/file/a36ecc7bd19a669deabdb.png"));
+        arrayList.add(new Model("https://telegra.ph/file/80bed3bb4ab1e063f38ce.png"));
+        arrayList.add(new Model("https://telegra.ph/file/49cc5d91123d056252a6f.png"));
+        arrayList.add(new Model("https://telegra.ph/file/c37b4013afcd8e67c85f2.png"));
+        arrayList.add(new Model("https://telegra.ph/file/6ae9b7c1303c8de0673bb.png"));
+        arrayList.add(new Model("https://telegra.ph/file/e781ab7af2813451bae5b.png"));
+        arrayList.add(new Model("https://telegra.ph/file/a8c5b2a42d7865f869c6c.png"));
+        arrayList.add(new Model("https://telegra.ph/file/d32a41c12e0af6008253b.png"));
+        arrayList.add(new Model("https://telegra.ph/file/ee137036feb8f2f073854.png"));
+        arrayList.add(new Model("https://telegra.ph/file/8879a0b08219db680b849.png"));
+        arrayList.add(new Model("https://telegra.ph/file/ffb0ac6c009d3a9344e5a.png"));
+        arrayList.add(new Model("https://telegra.ph/file/f2428f67717de8f8fdec7.png"));
     }
 
 }

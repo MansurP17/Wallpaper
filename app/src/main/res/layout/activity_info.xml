@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Free HD wallpapers for phone and desktop.\n\nConnect to the internet to use the app.\n\nIf the ad is null while downloading the image, please try again in a few seconds."
+        android:text="Free HD wallpapers for phone and desktop.\n\nConnect to the internet to use the app.\n\nIf there is no ad while downloading the image, please try again in a few seconds."
         android:textColor="@color/black"
         android:textSize="22sp" />
 

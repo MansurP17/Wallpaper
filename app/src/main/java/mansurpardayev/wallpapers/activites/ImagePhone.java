@@ -1,12 +1,15 @@
-package mansurpardayev.wallpapers;
+package mansurpardayev.wallpapers.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+
+import mansurpardayev.wallpapers.R;
 
 public class ImagePhone extends AppCompatActivity {
 
@@ -26,5 +29,6 @@ public class ImagePhone extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
     }
 }

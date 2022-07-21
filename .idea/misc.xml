@@ -12,9 +12,11 @@
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_image.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_image_desktop.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_image_phone.xml" value="0.1598731884057971" />
+        <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_info.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/activity_splash_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/desktop_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/download_dialog.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/fragment_desktop.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/fragment_phone.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidProjects/Wallpapers/app/src/main/res/layout/nointernet.xml" value="0.1" />

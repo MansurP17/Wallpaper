@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('D:\\AndroidProjects\\KeyStores\\wallpaper.jks')
+            storePassword 'Mansur.17.2007'
+            keyPassword 'Mansur.17.2007'
+            keyAlias 'keywallpaper'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
@@ -19,6 +27,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     compileOptions {
@@ -37,4 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.squareup.picasso:picasso:2.4.0'
+    implementation 'com.google.android.gms:play-services-ads:21.1.0'
 }

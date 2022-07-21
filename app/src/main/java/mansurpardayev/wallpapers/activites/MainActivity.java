@@ -1,15 +1,15 @@
-package mansurpardayev.wallpapers;
+package mansurpardayev.wallpapers.activites;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,11 +23,15 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
+
+import mansurpardayev.wallpapers.R;
+import mansurpardayev.wallpapers.fragments.DesktopFragment;
+import mansurpardayev.wallpapers.fragments.PhoneFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     Handler handler = new Handler();
 
+    FloatingActionButton fab;
 
     private InterstitialAd mInterstitialAd;
 
@@ -48,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(runnable, 10000);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        fab = findViewById(R.id.info_fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Info.class));
+            }
+        });
+
+        bottomNavigationView.setBackground(null);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, new PhoneFragment()).commit();
 
@@ -151,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AdRequest adRequest = new AdRequest.Builder().build();
-
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+//  test: ca-app-pub-3940256099942544/1033173712
+        InterstitialAd.load(this,"ca-app-pub-1474206512654633/9615300170", adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {

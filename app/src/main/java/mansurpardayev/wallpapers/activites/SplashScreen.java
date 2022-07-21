@@ -1,15 +1,16 @@
-package mansurpardayev.wallpapers;
+package mansurpardayev.wallpapers.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.google.android.material.imageview.ShapeableImageView;
+
+import mansurpardayev.wallpapers.R;
 
 public class SplashScreen extends AppCompatActivity {
 

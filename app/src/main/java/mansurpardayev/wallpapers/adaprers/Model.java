@@ -1,4 +1,4 @@
-package mansurpardayev.wallpapers;
+package mansurpardayev.wallpapers.adaprers;
 
 public class Model {
     String imageURL;

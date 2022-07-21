@@ -1,17 +1,9 @@
-package mansurpardayev.wallpapers;
+package mansurpardayev.wallpapers.fragments;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,15 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-
 import java.util.ArrayList;
+
+import mansurpardayev.wallpapers.adaprers.Model;
+import mansurpardayev.wallpapers.R;
+import mansurpardayev.wallpapers.adaprers.AdapterDesktop;
 
 public class DesktopFragment extends Fragment {
     RecyclerView recyclerView;
